@@ -39,8 +39,8 @@ public class Main {
                         int boxColFrom = box.getPositionCol();
                         box.move(direction);
                         player.move(direction);
-                        history.addRecord(map.getImmobileInstance(playerRowFrom, playerColFrom), map.getImmobileInstance(player.getPositionRow(), player.getPositionCol()), player);
                         history.addRecord(map.getImmobileInstance(boxRowFrom, boxColFrom), map.getImmobileInstance(box.getPositionRow(), box.getPositionCol()), box);
+                        history.addRecord(map.getImmobileInstance(playerRowFrom, playerColFrom), map.getImmobileInstance(player.getPositionRow(), player.getPositionCol()), player);
                     } else {
                         System.out.println("不能移动！");
                     }

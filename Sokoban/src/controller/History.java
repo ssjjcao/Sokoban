@@ -45,13 +45,13 @@ public class History {
 
     public void undo() throws CannotUndoException {
         if (current == null || current.record == null) {
-            throw new CannotUndoException("不能进行回退");
+            throw new CannotUndoException("已经到了初始状态，不能进行回退！");
         }
 
-        if (current.record.mobileInstance instanceof Box){
+        if (current.pre != null && current.pre.record.mobileInstance instanceof Box) {
             undoHelper();
             undoHelper();
-        }else {
+        } else {
             undoHelper();
         }
     }
