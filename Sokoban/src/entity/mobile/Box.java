@@ -37,7 +37,7 @@ public class Box extends Mobile {
     @Override
     public String toString() {
         if (isInTarget()) {
-            return "▣ ";
+            return "√ ";
         } else {
             return "□ ";
         }

@@ -43,7 +43,7 @@ public class Immobile {
     }
 
     public enum ImmobileType {
-        BLANK("　"), WALL("■ "), TARGET("◎ ");
+        BLANK("  "), WALL("■ "), TARGET("× ");
 
         private final String print;
 

@@ -48,7 +48,7 @@ public class History {
             throw new CannotUndoException("已经到了初始状态，不能进行回退！");
         }
 
-        if (current.pre != null && current.pre.record.mobileInstance instanceof Box) {
+        if (current.pre != null && current.pre.record != null && current.pre.record.mobileInstance instanceof Box) {
             undoHelper();
             undoHelper();
         } else {

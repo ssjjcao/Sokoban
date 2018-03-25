@@ -37,6 +37,6 @@ public class Player extends Mobile {
 
     @Override
     public String toString(){
-        return "★ ";
+        return "☺ ";
     }
 }
