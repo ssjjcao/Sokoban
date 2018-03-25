@@ -29,6 +29,15 @@ public abstract class Mobile {
         map.getImmobileInstance(positionRowTo, positionColTo).setMobileInstance(this);
     }
 
+    public void move(int positionRowFrom, int positionColFrom, int positionRowTo, int positionColTo) {
+        Map map = Map.getMap();
+        map.getImmobileInstance(positionRowFrom, positionColFrom).setMobileInstance(null);
+
+        setPosition(positionRowTo, positionColTo);
+
+        map.getImmobileInstance(positionRowTo, positionColTo).setMobileInstance(this);
+    }
+
     protected int[] getPositionAfterMove(Direction direction) {
         int[] position = new int[2];
         int positionRowFrom = this.getPositionRow();
@@ -73,11 +82,11 @@ public abstract class Mobile {
         }
     }
 
-    protected int getPositionRow() {
+    public int getPositionRow() {
         return positionRow;
     }
 
-    protected int getPositionCol() {
+    public int getPositionCol() {
         return positionCol;
     }
 

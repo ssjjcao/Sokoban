@@ -66,14 +66,13 @@ public class Map {
         scanner.close();
     }
 
-    public static Map initMap(File file) {
+    public static void initMap(File file) {
         try {
             map = new Map(file);
         } catch (FileNotFoundException e) {
             System.out.println(e.getMessage());
             System.exit(-1);
         }
-        return map;
     }
 
     public static Map getMap() {
@@ -81,15 +80,7 @@ public class Map {
     }
 
     public Immobile getImmobileInstance(int positionRow, int positionCol) {
-        for (Immobile[] row : immobiles) {
-            for (Immobile immobileInstance : row) {
-                if (positionRow == immobileInstance.getPositionRow() &&
-                        positionCol == immobileInstance.getPositionCol()) {
-                    return immobileInstance;
-                }
-            }
-        }
-        return null;
+        return immobiles[positionRow][positionCol];
     }
 
     public Player getPlayer() {

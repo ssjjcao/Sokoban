@@ -39,7 +39,7 @@ public class Box extends Mobile {
         if (isInTarget()) {
             return "▣ ";
         } else {
-            return "□";
+            return "□ ";
         }
     }
 }

@@ -39,11 +39,11 @@ public class Immobile {
 
     @Override
     public String toString() {
-        return getImmobileType().getPrint() + " ";
+        return getImmobileType().getPrint();
     }
 
     public enum ImmobileType {
-        BLANK("　"), WALL("■"), TARGET("◎");
+        BLANK("  "), WALL("■ "), TARGET("◎ ");
 
         private final String print;
 
