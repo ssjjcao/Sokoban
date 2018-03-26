@@ -66,12 +66,12 @@ public class Map {
         scanner.close();
     }
 
-    public static void initMap(File file) {
+    public static void initMap(File file) throws FileNotFoundException {
         try {
             map = new Map(file);
         } catch (FileNotFoundException e) {
-            System.out.println(e.getMessage());
-            System.exit(-1);
+            System.out.println("文件路径错误，已默认为您打开一个地图，可以通过new指令重新打开自定义地图");
+            map = new Map(new File("maps/1.map"));
         }
     }
 

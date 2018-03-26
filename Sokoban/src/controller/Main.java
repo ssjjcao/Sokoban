@@ -6,13 +6,14 @@ import entity.mobile.Player;
 import exception.CannotUndoException;
 
 import java.io.File;
+import java.io.FileNotFoundException;
 import java.util.Scanner;
 
 /**
  * Created by caojiajun on 2018/3/24.
  */
 public class Main {
-    public static void main(String[] args) {
+    public static void main(String[] args) throws FileNotFoundException {
         System.out.println("请输入地图文件：");
         Scanner input = new Scanner(System.in);
         String file = input.nextLine();
