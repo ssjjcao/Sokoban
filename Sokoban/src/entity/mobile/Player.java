@@ -19,24 +19,19 @@ public class Player extends Mobile {
         int positionColTo = positionTo[1];
         Map map = Map.getMap();
         Immobile.ImmobileType type = map.getImmobileInstance(positionRowTo, positionColTo).getImmobileType();
-
-        if (type == Immobile.ImmobileType.WALL || isOutOfBoundary(direction)) {
-            return false;
-        } else {
-            return true;
-        }
+        return type != Immobile.ImmobileType.WALL;
     }
 
-    public Object getBeside(Direction direction){
+    public Object getBeside(Direction direction) {
         int[] positionTo = getPositionAfterMove(direction);
         int positionRowTo = positionTo[0];
         int positionColTo = positionTo[1];
         Map map = Map.getMap();
-        return map.getImmobileInstance(positionRowTo,positionColTo).getMobileInstance();
+        return map.getImmobileInstance(positionRowTo, positionColTo).getMobileInstance();
     }
 
     @Override
-    public String toString(){
+    public String toString() {
         return "☺ ";
     }
 }

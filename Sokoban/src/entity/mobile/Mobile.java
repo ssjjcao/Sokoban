@@ -64,24 +64,6 @@ public abstract class Mobile {
         return position;
     }
 
-    protected boolean isOutOfBoundary(Direction direction) {
-        int[] positionTo = getPositionAfterMove(direction);
-        int positionRowTo = positionTo[0];
-        int positionColTo = positionTo[1];
-
-        Map map = Map.getMap();
-        int[] size = map.getSize();
-        int rowNum = size[0];
-        int colNum = size[1];
-
-        if (positionRowTo <= 0 || positionRowTo >= rowNum ||
-                positionColTo <= 0 || positionColTo >= colNum) {
-            return true;
-        } else {
-            return false;
-        }
-    }
-
     public int getPositionRow() {
         return positionRow;
     }

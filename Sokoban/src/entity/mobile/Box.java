@@ -21,7 +21,7 @@ public class Box extends Mobile {
         Immobile immobileInstance = map.getImmobileInstance(positionRowTo, positionColTo);
         Immobile.ImmobileType type = immobileInstance.getImmobileType();
 
-        if (type == Immobile.ImmobileType.WALL || isOutOfBoundary(direction) ||
+        if (type == Immobile.ImmobileType.WALL ||
                 immobileInstance.getMobileInstance() instanceof Box) {
             return false;
         } else {
