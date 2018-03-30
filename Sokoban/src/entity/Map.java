@@ -119,11 +119,4 @@ public class Map {
             System.out.print("\n");
         }
     }
-
-    public int[] getSize() {
-        int[] size = new int[2];
-        size[0] = immobiles.length;
-        size[1] = immobiles[0].length;
-        return size;
-    }
 }
