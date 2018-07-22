@@ -1,3 +1,5 @@
 # Sokoban
-推箱子的Java实现(简单的命令行版，地图在maps文件夹下，共9个)
+Box game run in cmd.
+
+Classical maps are in floder /maps.
 > This is the lab of my OOP course.
